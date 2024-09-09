@@ -1,4 +1,4 @@
-function NameofSong({ title, artist }) {
+function SongTitle({ title, artist }) {
   return (
     <div>
       <h2 className="leading-8 text-2xl font-bold mb-2">{title}</h2>
@@ -7,4 +7,4 @@ function NameofSong({ title, artist }) {
   );
 }
 
-export default NameofSong;
+export default SongTitle;
