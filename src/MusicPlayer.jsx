@@ -4,9 +4,9 @@ import Playlist from "./components/Playlist";
 
 export default function MusicPlayer() {
   return (
-    <div className="flex flex-col md:flex md:flex-row p-0 justify-center h-full w-full max-w-4xl ml-auto mr-auto overflow-hidden rounded-lg shadow-lg bg-gradient-to-b from-vista-blue-100 to-butterfly-bush-400">
-        <CurrentlyPlaying />
-        <Playlist />
+    <div className="from-steel-blue-100 ml-auto mr-auto flex h-full w-full max-w-4xl flex-col justify-center overflow-hidden rounded-lg bg-gradient-to-b to-emerald-500 p-0 shadow-lg md:flex md:flex-row">
+      <CurrentlyPlaying />
+      <Playlist />
     </div>
   );
 }

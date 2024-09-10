@@ -46,7 +46,7 @@ function VolumeControl() {
         min={0}
         max={100}
         value={volume}
-        className="w-full h-8 accent-vista-blue-700 outline-2 outline-transparent outline-offset-2"
+        className="accent-steel-blue-700 h-8 w-full outline-2 outline-offset-2 outline-transparent"
         onChange={handleVolumeChange}
       ></input>
     </div>

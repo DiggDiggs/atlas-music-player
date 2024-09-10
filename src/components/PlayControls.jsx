@@ -45,7 +45,7 @@ function PlayControls() {
   return (
     <div className="player-controls mb-4 flex items-center justify-between">
       <button className="btn-playcontrols" onClick={togglePlaybackSpeed}>
-        <span className="text-lg text-vista-blue-800 font-medium">
+        <span className="text-lg text-steel-blue-800 font-medium">
           {playbackSpeed}x
         </span>
       </button>

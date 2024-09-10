@@ -3,7 +3,7 @@ import MusicPlayer from "./MusicPlayer";
 
 function App() {
   return (
-    <div className="justify-between flex flex-col h-full p-8 min-h-screen bg-gradient-to-t from-vista-blue-50 to-vista-blue-600">
+    <div className="from-steel-blue-50 to-steel-blue-600 flex h-full min-h-screen flex-col justify-between bg-gradient-to-t p-8">
       <MusicPlayer />
       <Footer />
     </div>
