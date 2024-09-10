@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import CurrentlyPlaying from "./components/CurrentlyPlaying";
 import Playlist from "./components/Playlist";
-import PlayControls from "./components/PlayControls";
 
 const MusicPlayer = () => {
   // Sample playlist with song objects
@@ -105,6 +104,10 @@ const MusicPlayer = () => {
 
   // Current song object
   const currentSong = playlist[currentSongIndex];
+  const handleClickItem = (songId) => {
+    const songIndex = playlist.findIndex((song) => song.id === songId);
+    setCurrentSongIndex(songIndex);
+  };
 
   return (
     <div className="from-steel-blue-100 ml-auto mr-auto flex h-full w-full max-w-4xl flex-col justify-center overflow-hidden rounded-lg bg-gradient-to-b to-emerald-500 p-0 shadow-lg md:flex md:flex-row">
@@ -113,8 +116,7 @@ const MusicPlayer = () => {
         playNext={playNext}
         playPrevious={playPrevious}
       />
-      <Playlist playlist={playlist} />
-      <PlayControls playNext={playNext} playPrevious={playPrevious} />
+      <Playlist playlist={playlist} onClickItem={handleClickItem} />
     </div>
   );
 };

@@ -1,16 +1,20 @@
-// the items in playlist
+import React from "react";
 
-function PlayListItem({ title, artist, length }) {
+function PlayListItem({ title, artist, length, onClick }) {
   return (
-    <div className="mb-2 flex w-full justify-between pr-3 font-medium">
+    <div
+      className="mb-2 flex w-full cursor-pointer justify-between pr-3 font-medium transition-colors hover:bg-gray-200"
+      onClick={onClick}
+    >
       <div className="wrapper text-left text-sm">
         <div className="text-base">{title}</div>
-        <div className="text-emerald:-800">{artist}</div>
+        <div className="text-emerald-800">{artist}</div>
       </div>
       <div className="length flex items-center">
-        <div className="text-emerald:-800 text-sm">{length}</div>
+        <div className="text-sm text-emerald-800">{length}</div>
       </div>
     </div>
   );
 }
+
 export default PlayListItem;

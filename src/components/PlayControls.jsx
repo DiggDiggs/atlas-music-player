@@ -44,6 +44,11 @@ function PlayControls({ playNext, playPrevious }) {
 
   return (
     <div className="player-controls mb-4 flex items-center justify-between">
+      <button className="btn-playcontrols" onClick={togglePlaybackSpeed}>
+        <span className="text-vista-blue-800 text-lg font-medium">
+          {playbackSpeed}x
+        </span>
+      </button>
       <button
         className="btn-playcontrols"
         onClick={playPrevious}
@@ -65,11 +70,7 @@ function PlayControls({ playNext, playPrevious }) {
       >
         <img src={forwardSVG} alt="Next Button" className="size-6" />
       </button>
-      <button className="btn-playcontrols" onClick={togglePlaybackSpeed}>
-        <span className="text-vista-blue-800 text-lg font-medium">
-          {playbackSpeed}x
-        </span>
-      </button>
+
       <button className="btn-playcontrols" onClick={handlePlaybackToggle}>
         <img src={playbackSVG} alt="Playback Mode Button" className="size-6" />
       </button>
